@@ -1,0 +1,74 @@
+#include<iostream>
+#include<list>
+
+using namespace std;
+
+int main()
+{
+
+	int n;
+	cin >> n;
+	for (int i = 0; i < n;i++)
+	{
+		string s;
+		cin >> s;
+		list<char> l;
+		list<char>::iterator t = l.begin();
+		for (int i=0; i<s.size(); i++)
+		{
+
+
+
+
+			if (s[i] == '<')
+			{
+				if (t == l.begin())
+					continue;
+
+				t--;
+
+
+			}
+			else if (s[i] == '>')
+			{
+				if (t == l.end())
+					continue;
+
+				t++;
+
+			}
+			else if (s[i] == '-')
+			{
+				if (t == l.begin())
+					continue;
+
+				t--;
+				t = l.erase(t);
+
+
+			}
+			else
+			{
+				l.insert(t, s[i]);
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+		for (auto e : l) cout << e;
+		cout << "\n";
+
+
+	}
+
+
+}
+
+
