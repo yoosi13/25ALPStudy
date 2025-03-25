@@ -18,11 +18,11 @@ int main() {
 
     int st = 0;
     int en = trees[N - 1];
-    int result = 0;
+    long long result = 0;
 
     while (st <= en) {
         int mid = (st + en) / 2;
-        int total = 0;
+        long long total = 0;
 
         for (int i = 0; i < N; i++) {
             if (trees[i] > mid) {
