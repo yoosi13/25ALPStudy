@@ -1,0 +1,26 @@
+#include <iostream>
+#include <numeric>
+using namespace std;
+
+const int MX = 1000005;
+int pos = 0;
+int stack[MX];
+
+int main(){
+    int K;
+    cin >> K;
+    while (K > 0){
+        int N;
+        cin >> N;
+        if (N != 0){
+            stack[pos] = N;
+            pos++;            
+        }
+        else{
+            pos--;
+        }
+        K--;
+    }
+    int result = accumulate(stack, stack + pos, 0);
+    cout << result;
+}
