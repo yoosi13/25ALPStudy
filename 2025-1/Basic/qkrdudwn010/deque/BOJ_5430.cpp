@@ -53,12 +53,12 @@ int main() {
             cout << "[";
             if (!dq.empty()) {
                 if (reversed) {
-                    for (auto it = dq.rbegin(); it != dq.rend(); ++it) {
+                    for (auto it = dq.rbegin(); it != dq.rend(); it++) {
                         if (it != dq.rbegin()) cout << ",";
                         cout << *it;
                     }
                 } else {
-                    for (auto it = dq.begin(); it != dq.end(); ++it) {
+                    for (auto it = dq.begin(); it != dq.end(); it++) {
                         if (it != dq.begin()) cout << ",";
                         cout << *it;
                     }
