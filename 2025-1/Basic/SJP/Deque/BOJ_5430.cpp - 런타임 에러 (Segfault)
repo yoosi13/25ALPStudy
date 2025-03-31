@@ -25,7 +25,7 @@ int main(){
         int j = 1;
         for (int i = 0; i < n; i++){
             string add = "";
-            while ('0'- 0 <= text[j] - 0 <= '9'- 0){
+            while (isdigit(text[j])){
                 add += text[j];
                 j++;
             } 
