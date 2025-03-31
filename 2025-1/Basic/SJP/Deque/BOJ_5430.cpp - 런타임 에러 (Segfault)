@@ -1,0 +1,62 @@
+#include <iostream>
+#include <deque>
+using namespace std;
+
+bool error(string command, int n){
+    int num = 0;
+    for (char c : command){
+        if (c == 'D') num++;
+    }
+    if (num > n) return true;
+    else return false;
+}
+
+int main(){
+    int T;
+    cin >> T;
+    while (T > 0){
+        string command, text;
+        int n;
+        cin >> command >> n >> text;
+
+        if (error(command, n)) cout << "error" << endl;
+        else {
+        deque <int>DQ;
+        int j = 1;
+        for (int i = 0; i < n; i++){
+            string add = "";
+            while ('0'- 0 <= text[j] - 0 <= '9'- 0){
+                add += text[j];
+                j++;
+            } 
+            DQ.push_back(stoi(add));
+            j++;
+        }
+        bool rev = 0;
+        for (char c : command){
+            if (c == 'R') rev = !rev;
+            if (c == 'D'){
+                if (rev) DQ.pop_back();
+                else DQ.pop_front();
+            }
+        }
+        if (rev){
+            cout << '[';
+            while (DQ.size() > 1){
+                cout << DQ.back() << ',';
+                DQ.pop_back();
+            } 
+            cout << DQ.back() << ']' << endl;
+        }
+        else{
+            cout << '[';
+            while (DQ.size() > 1){
+                cout << DQ.front() << ',';
+                DQ.pop_front();
+            } 
+            cout << DQ.front() << ']' << endl;
+        }
+    }
+        T--;
+    }
+}
