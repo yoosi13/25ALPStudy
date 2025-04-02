@@ -11,14 +11,12 @@ int main() {
 
     vector<int> a(N);
 
-    for (int i = 0; i < N; i++) {
-        cin >> a[i];
-    }
+    for (int i = 0; i < N; i++) cin >> a[i];
 
     sort(a.begin(), a.end());
 
     int result = INT_MAX;
-    int st = 0, en = 0;
+    int en = 0;
 
     for (int st = 0; st < N; st++) {
         while (en < N && a[en] - a[st] < M) en++;
