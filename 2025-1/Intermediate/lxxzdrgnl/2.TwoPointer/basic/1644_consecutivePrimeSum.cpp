@@ -14,7 +14,7 @@ int main() {
     isPrime[0] = isPrime[1] = false;
 
     vector<int> primes;
-    for (int i = 2; i <= n; ++i) {
+    for (int i = 2; i <= N; ++i) {
         if (isPrime[i]) {
             primes.push_back(i);
             for (int j = i * 2; j <= N; j += i) {
@@ -24,6 +24,18 @@ int main() {
     }
 
     int en = 0;
-    for (int st = 0; st < N; st++) {
+    int cnt = 0;
+    int sum = 0;
+    int len = primes.size();
+
+    for (int st = 0; st < len; st++) {
+        while (en < len && sum < N) {
+            sum += primes[en];
+            en++;
+        }
+        if (sum == N) cnt++;
+        sum -= primes[st];
     }
+
+    cout << cnt;
 }
