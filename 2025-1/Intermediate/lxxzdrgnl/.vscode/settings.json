@@ -23,7 +23,8 @@
         "stacktrace": "cpp",
         "text_encoding": "cpp",
         "regex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "functional": "cpp"
     },
     "BOJ-Tester.defaultLanguage": "cpp",
     "C_Cpp.errorSquiggles": "disabled"
