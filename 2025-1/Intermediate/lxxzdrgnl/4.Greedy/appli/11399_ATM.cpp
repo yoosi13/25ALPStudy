@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main() {
@@ -8,7 +7,6 @@ int main() {
 
     int N;
     cin >> N;
-
     vector<int> P(N);
     for (int i = 0; i < N; ++i) {
         cin >> P[i];
@@ -16,14 +14,11 @@ int main() {
 
     sort(P.begin(), P.end());
 
-    int total_time = 0;
-    int accumulated_time = 0;
-
+    int total = 0, sum = 0;
     for (int i = 0; i < N; ++i) {
-        accumulated_time += P[i];
-        total_time += accumulated_time;
+        sum += P[i];
+        total += sum;
     }
 
-    cout << total_time << '\n';
-    return 0;
+    cout << total << '\n';
 }
