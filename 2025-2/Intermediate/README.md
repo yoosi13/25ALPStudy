@@ -11,8 +11,8 @@
 ## 커리큘럼
 | | |
 | --- | --- |
-| 1 주차 | [OT](https://blog.encrypted.gg/921?category=773649) / 수학적 귀납법 |
-| 2 주차 | [이분 탐색](https://blog.encrypted.gg/985) / [투 포인터](https://blog.encrypted.gg/1004) |
+| 1 주차 | [OT](https://blog.encrypted.gg/921?category=773649) / 수학적 귀납법 / [이분 탐색](https://blog.encrypted.gg/985) |
+| 2 주차 | [투 포인터](https://blog.encrypted.gg/1004) |
 | 3 주차 | [DP](https://blog.encrypted.gg/974) |
 | 4 주차 | [그리디](https://blog.encrypted.gg/975) |
 | 5 주차  | [분할 정복](https://m.blog.naver.com/PostView.naver?blogId=kks227&logNo=220776241154&referrerCode=0&searchKeyword=%EB%B6%84%ED%95%A0%20%EC%A0%95%EB%B3%B5) |
